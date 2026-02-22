@@ -1,12 +1,17 @@
 .navbarControls {
     position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 2rem;
+    left: 0;
+    width: 100%;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+}
+
+.navbarControls>* {
+    pointer-events: auto;
 }
 
 .navContainer {

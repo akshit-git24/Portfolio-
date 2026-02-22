@@ -44,6 +44,7 @@ export default function Navbar() {
                 panelHeight={68}
                 baseItemSize={50}
                 magnification={70}
+                spring={{ mass: 0.1, stiffness: 150, damping: 20 }}
             />
         </nav>
     );
