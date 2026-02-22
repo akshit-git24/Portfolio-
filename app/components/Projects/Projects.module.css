@@ -1,0 +1,98 @@
+.projects {
+    padding: calc(var(--spacing-base) * 6) 0;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: calc(var(--spacing-base) * 4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: calc(var(--spacing-base) * 2);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imagePlaceholder {
+    height: 200px;
+    background: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 0.5);
+    /* Let lightning show through */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectIcon {
+    font-size: 4rem;
+    font-weight: 800;
+    color: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.5);
+    position: absolute;
+    z-index: 10;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding: calc(var(--spacing-base) * 1.5);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    margin-bottom: calc(var(--spacing-base) * 0.5);
+    color: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+}
+
+.content p {
+    color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.7));
+    font-size: 0.95rem;
+    margin-bottom: calc(var(--spacing-base) * 1.5);
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: calc(var(--spacing-base) * 1.5);
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    background: hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.05);
+    color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.8));
+}
+
+.link {
+    color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color var(--transition-fast);
+    margin-top: auto;
+}
+
+.link:hover {
+    color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}

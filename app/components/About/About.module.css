@@ -1,0 +1,67 @@
+.about {
+    padding: calc(var(--spacing-base) * 8) 0;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: calc(var(--spacing-base) * 4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing-base) * 2);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    padding: calc(var(--spacing-base) * 2.5);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    transition: transform var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+    margin-bottom: var(--spacing-base);
+}
+
+.card p {
+    color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.7));
+    line-height: 1.7;
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-base) * 0.75);
+    margin-top: calc(var(--spacing-base) * 0.5);
+}
+
+.tag {
+    background: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.1);
+    color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2);
+}
+
+.tag:hover {
+    background: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2);
+}

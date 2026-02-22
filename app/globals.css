@@ -1,26 +1,132 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* HSL Colors for better manipulation */
+  --bg-h: 0;
+  --bg-s: 0%;
+  --bg-l: 95%;
+  /* Light theme background */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --fg-h: 0;
+  --fg-s: 0%;
+  --fg-l: 10%;
+  /* Light theme text */
+
+  --primary-h: 220;
+  /* Blue-ish */
+  --primary-s: 90%;
+  --primary-l: 60%;
+
+  --accent-h: 280;
+  /* Purple-ish */
+  --accent-s: 80%;
+  --accent-l: 65%;
+
+  --surface-h: 0;
+  --surface-s: 0%;
+  --surface-l: 100%;
+
+  --spacing-base: 1rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-h: 225;
+    --bg-s: 40%;
+    --bg-l: 6%;
+    /* Deep dark blue background */
+    --fg-h: 210;
+    --fg-s: 20%;
+    --fg-l: 95%;
+    /* Light blue-tinted white text */
+    --surface-h: 225;
+    --surface-s: 30%;
+    --surface-l: 12%;
+    --primary-h: 215;
+    --primary-s: 100%;
+    --primary-l: 60%;
+    --accent-h: 280;
+    --accent-s: 80%;
+    --accent-l: 65%;
   }
 }
 
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
+  color: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Common utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg,
+      hsl(var(--primary-h), var(--primary-s), var(--primary-l)),
+      hsl(var(--accent-h), var(--accent-s), var(--accent-l)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.glass-panel {
+  background: hsla(var(--surface-h), var(--surface-s), var(--surface-l), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }

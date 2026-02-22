@@ -1,0 +1,90 @@
+.contact {
+    padding: calc(var(--spacing-base) * 6) 0 calc(var(--spacing-base) * 10);
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: calc(var(--spacing-base) * 2);
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    text-align: center;
+    color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.8));
+    margin-bottom: calc(var(--spacing-base) * 4);
+    line-height: 1.6;
+}
+
+.form {
+    width: 100%;
+    padding: calc(var(--spacing-base) * 2.5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-base) * 1.5);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid hsla(var(--fg-h), var(--fg-s), var(--fg-l), 0.2);
+    background: hsla(var(--surface-h), var(--surface-s), var(--surface-l), 0.5);
+    color: hsl(var(--fg-h), var(--fg-s), var(--fg-l));
+    font-family: inherit;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    box-shadow: 0 0 0 3px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitBtn {
+    margin-top: calc(var(--spacing-base) * 0.5);
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    gap: calc(var(--spacing-base) * 1.5);
+    margin-top: calc(var(--spacing-base) * 4);
+}
+
+.socialLink {
+    color: hsl(var(--fg-h), var(--fg-s), calc(var(--fg-l) * 0.7));
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+    color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+}
