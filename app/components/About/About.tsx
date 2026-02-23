@@ -2,8 +2,8 @@ import styles from './About.module.css';
 
 export default function About() {
     const skills = [
-        "JavaScript", "TypeScript", "React", "Next.js",
-        "Node.js", "Vanilla CSS", "UI/UX Design", "Performance"
+        "Python", "C++", "Go", "JavaScript", "Django",
+        "FastAPI", "React.js", "Next.js", "PostgreSQL", "Docker", "Kafka"
     ];
 
     return (
@@ -19,7 +19,7 @@ export default function About() {
                             I am a passionate software engineer with a keen eye for design and a drive to build seamless digital experiences. With expertise in modern web technologies, I focus on creating applications that are not just functional, but beautiful and performant.
                         </p>
                         <p>
-                            Over the years, I have honed my skills in frontend development, constantly pushing the boundaries of what is possible on the web.
+                            Education: B.Tech in Computer Science from Guru Nanak Dev University (2024 - 2028) and B.S. in Data Science from Indian Institute of Technology Madras (2024 - 2027).
                         </p>
                     </div>
                     <div className={`${styles.card} glass-panel`}>

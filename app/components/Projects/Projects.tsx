@@ -6,23 +6,16 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: 'E-Commerce Platform',
-            description: 'A full-stack e-commerce solution with real-time inventory and Stripe payment integration.',
-            tags: ['Next.js', 'TypeScript', 'Tailwind', 'Stripe'],
+            title: 'HostelNET - Virtual Hostel Room Allotment System',
+            description: 'Microservices-based hostel allocation platform separating authentication and automated room allocation engine.',
+            tags: ['Django', 'Go(Gin)', 'FastAPI', 'Nginx', 'Docker'],
             link: '#'
         },
         {
             id: 2,
-            title: 'Task Management App',
-            description: 'A collaborative task management application with real-time updates and drag-and-drop features.',
-            tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-            link: '#'
-        },
-        {
-            id: 3,
-            title: 'AI Content Generator',
-            description: 'An AI-powered application that generates high-quality marketing copy using OpenAI APIs.',
-            tags: ['Next.js', 'OpenAI', 'PostgreSQL', 'Prisma'],
+            title: 'TECHSPARK - UNIVERSITY EVENT MANAGEMENT SYSTEM',
+            description: 'Role-based event management portal with Razorpay payment gateway integration and multi-level staff approvals.',
+            tags: ['Django', 'HTML', 'Tailwind CSS', 'Render'],
             link: '#'
         }
     ];

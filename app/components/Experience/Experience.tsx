@@ -4,19 +4,11 @@ export default function Experience() {
     const experiences = [
         {
             id: 1,
-            role: 'Senior Software Engineer',
-            company: 'Tech Innovators Inc.',
-            duration: '2021 - Present',
-            description: 'Led a team of 5 developers building scalable microservices. Improved system performance by 40% using Go and PostgreSQL.',
-            skills: ['Go', 'PostgreSQL', 'Kubernetes', 'AWS']
-        },
-        {
-            id: 2,
-            role: 'Frontend Developer',
-            company: 'Digital Solutions LLC',
-            duration: '2019 - 2021',
-            description: 'Developed interactive dashboards and unified the design system across multiple enterprise applications.',
-            skills: ['React', 'TypeScript', 'Redux', 'Sass']
+            role: 'Software Engineer Intern (Full Stack)',
+            company: 'NV Global Tech',
+            duration: 'Sept 2025 - Feb 2026',
+            description: 'Architected a secure Django REST authentication system and Razorpay payment subscription gateway with webhook verification. Mentored a junior developer and refactored the authentication module for maintainability.',
+            skills: ['Django REST', 'Razorpay', 'Twilio', 'Cron Jobs']
         }
     ];
 

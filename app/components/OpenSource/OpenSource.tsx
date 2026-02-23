@@ -4,24 +4,17 @@ export default function OpenSource() {
     const contributions = [
         {
             id: 1,
-            repo: 'vercel/next.js',
-            description: 'Fixed a core routing bug in the App Router that improved navigation performance.',
+            repo: '50+ DSA Problems',
+            description: 'Solved 50+ Data Structures and Algorithms problems on LeetCode and CodeStudio.',
             link: '#',
-            stars: '120k'
+            stars: '50+'
         },
         {
             id: 2,
-            repo: 'facebook/react',
-            description: 'Contributed improvements to the official documentation regarding Hooks.',
+            repo: 'SWOC-26 Contributor',
+            description: 'Improved backend scalability by implementing deterministic pagination, standardized JSON errors, and optimized query paths.',
             link: '#',
-            stars: '210k'
-        },
-        {
-            id: 3,
-            repo: 'vitejs/vite',
-            description: 'Optimized development build times by resolving a caching issue in the core bundler.',
-            link: '#',
-            stars: '60k'
+            stars: 'PR Merged'
         }
     ];
 
